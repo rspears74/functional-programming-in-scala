@@ -1,32 +1,62 @@
 [debug] [zinc] IncrementalCompile -----------
 [debug] IncrementalCompile.incrementalCompile
-[debug] previous = Stamps for: 1 products, 1 sources, 5 libraries
-[debug] current source = Set(${BASE}/src/test/scala/RecursionTests.scala)
-[debug] > initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/test/scala/RecursionTests.scala), unmodified = ...),Set(),Set(),API Changes: Set())
+[debug] previous = Stamps for: 2 products, 2 sources, 5 libraries
+[debug] current source = Set(${BASE}/src/test/scala/MyListTests.scala, ${BASE}/src/test/scala/RecursionTests.scala)
+[debug] > initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/test/scala/MyListTests.scala), unmodified = ...),Set(),Set(),API Changes: Set(NamesChange(Recursion$,ModifiedNames(changes = UsedName(compose,[Default]), UsedName(uncurry,[Default]), UsedName(curry,[Default]))), NamesChange(MyList$,ModifiedNames(changes = UsedName(init,[Default]))), NamesChange(MyList,ModifiedNames(changes = UsedName(init,[Default])))))
+[debug] The Recursion$ has the following regular definitions changed:
+[debug] 	UsedName(compose,[Default]), UsedName(uncurry,[Default]), UsedName(curry,[Default]).
+[debug] All member reference dependencies will be considered within this context.
+[debug] Files invalidated by inheriting from (external) Recursion$: Set()
+[debug] Now invalidating by inheritance (internally).
+[debug] Getting direct dependencies of all classes transitively invalidated by inheritance.
+[debug] Getting classes that directly depend on (external) Recursion$.
+[debug] None of the modified names appears in source file of RecursionTests. This dependency is not being considered for invalidation.
+[debug] The MyList$ has the following regular definitions changed:
+[debug] 	UsedName(init,[Default]).
+[debug] All member reference dependencies will be considered within this context.
+[debug] Files invalidated by inheriting from (external) MyList$: Set()
+[debug] Now invalidating by inheritance (internally).
+[debug] Getting direct dependencies of all classes transitively invalidated by inheritance.
+[debug] Getting classes that directly depend on (external) MyList$.
+[debug] None of the modified names appears in source file of MyListTests. This dependency is not being considered for invalidation.
+[debug] The MyList has the following regular definitions changed:
+[debug] 	UsedName(init,[Default]).
+[debug] All member reference dependencies will be considered within this context.
+[debug] Files invalidated by inheriting from (external) MyList: Set()
+[debug] Now invalidating by inheritance (internally).
+[debug] Getting direct dependencies of all classes transitively invalidated by inheritance.
+[debug] Getting classes that directly depend on (external) MyList.
+[debug] None of the modified names appears in source file of MyListTests. This dependency is not being considered for invalidation.
 [debug] 
 [debug] Initial source changes:
 [debug] 	removed: Set()
 [debug] 	added: Set()
-[debug] 	modified: Set(${BASE}/src/test/scala/RecursionTests.scala)
+[debug] 	modified: Set(${BASE}/src/test/scala/MyListTests.scala)
 [debug] Invalidated products: Set()
-[debug] External API changes: API Changes: Set()
+[debug] External API changes: API Changes: Set(NamesChange(Recursion$,ModifiedNames(changes = UsedName(compose,[Default]), UsedName(uncurry,[Default]), UsedName(curry,[Default]))), NamesChange(MyList$,ModifiedNames(changes = UsedName(init,[Default]))), NamesChange(MyList,ModifiedNames(changes = UsedName(init,[Default]))))
 [debug] Modified binary dependencies: Set()
-[debug] Initial directly invalidated classes: Set(RecursionTests)
+[debug] Initial directly invalidated classes: Set(MyListTests)
 [debug] Sources indirectly invalidated by:
 [debug] 	product: Set()
 [debug] 	binary dep: Set()
 [debug] 	external source: Set()
-[debug] all 1 sources are invalidated
-[debug] Initial set of included nodes: RecursionTests
-[debug] Recompiling all sources: number of invalidated sources > 50.0% of all sources
+[debug] All initially invalidated classes: Set(MyListTests)
+[debug] All initially invalidated sources:Set(${BASE}/src/test/scala/MyListTests.scala)
+[debug] Initial set of included nodes: MyListTests
 [debug] compilation cycle 1
 [info] compiling 1 Scala source to C:\Users\randa\IdeaProjects\functional-programming-in-scala\target\scala-2.13\test-classes ...
 [debug] Getting org.scala-sbt:compiler-bridge_2.13:1.7.1:compile for Scala 2.13.8
-[debug] [zinc] Running cached compiler 6f1f3157 for Scala compiler version 2.13.8
+[debug] [zinc] Running cached compiler 15897620 for Scala compiler version 2.13.8
 [debug] [zinc] The Scala compiler is invoked with:
 [debug] 	-bootclasspath
 [debug] 	C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.8\scala-library-2.13.8.jar
 [debug] 	-classpath
 [debug] 	C:\Users\randa\IdeaProjects\functional-programming-in-scala\target\scala-2.13\test-classes;C:\Users\randa\IdeaProjects\functional-programming-in-scala\target\scala-2.13\classes;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalactic\scalactic_2.13\3.2.13\scalactic_2.13-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest_2.13\3.2.13\scalatest_2.13-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.13.8\scala-reflect-2.13.8.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-core_2.13\3.2.13\scalatest-core_2.13-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-featurespec_2.13\3.2.13\scalatest-featurespec_2.13-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-flatspec_2.13\3.2.13\scalatest-flatspec_2.13-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-freespec_2.13\3.2.13\scalatest-freespec_2.13-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-funsuite_2.13\3.2.13\scalatest-funsuite_2.13-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-funspec_2.13\3.2.13\scalatest-funspec_2.13-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-propspec_2.13\3.2.13\scalatest-propspec_2.13-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-refspec_2.13\3.2.13\scalatest-refspec_2.13-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-wordspec_2.13\3.2.13\scalatest-wordspec_2.13-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-diagrams_2.13\3.2.13\scalatest-diagrams_2.13-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-matchers-core_2.13\3.2.13\scalatest-matchers-core_2.13-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-shouldmatchers_2.13\3.2.13\scalatest-shouldmatchers_2.13-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-mustmatchers_2.13\3.2.13\scalatest-mustmatchers_2.13-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-compatible\3.2.13\scalatest-compatible-3.2.13.jar;C:\Users\randa\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.13\2.1.0\scala-xml_2.13-2.1.0.jar
-[debug] Scala compilation took 0.5371472 s
+[debug] New invalidations:
+[debug] Initial set of included nodes: 
+[debug] Previously invalidated, but (transitively) depend on new invalidations:
+[debug] Final step, transitive dependencies:
+[debug] 	Set()
+[debug] No classes were invalidated.
+[debug] Scala compilation took 0.2837466 s
 [info] done compiling

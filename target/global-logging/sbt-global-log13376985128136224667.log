@@ -1,5 +1,10 @@
-[debug] Running TaskDef(RecursionTests, org.scalatest.tools.Framework$$anon$1@438d6a37, false, [SuiteSelector])
-[debug] Running TaskDef(MyListTests, org.scalatest.tools.Framework$$anon$1@438d6a37, false, [SuiteSelector])
+[debug] > Exec(test, None, None)
+[debug] Evaluating tasks: Test / test
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\randa\IdeaProjects\functional-programming-in-scala\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 1 Scala source to C:\Users\randa\IdeaProjects\functional-programming-in-scala\target\scala-2.13\test-classes ...
+[info] done compiling
 [info] RecursionTests:
 [info] - fib(6) is 5
 [info] - fib(0) is 0
@@ -35,6 +40,5 @@
 [info] Suites: completed 2, aborted 0
 [info] Tests: succeeded 28, failed 0, canceled 0, ignored 0, pending 0
 [info] All tests passed.
-[debug] Passed tests:
-[debug] 	RecursionTests
-[debug] 	MyListTests
+[success] Total time: 1 s, completed Aug 20, 2022, 5:09:51 PM
+[debug] > Exec(idea-shell, None, None)
