@@ -1,0 +1,16 @@
+[debug] Running TaskDef(RecursionTests, org.scalatest.tools.Framework$$anon$1@7125815e, false, [SuiteSelector])
+[info] RecursionTests:
+[info] - fib(6) is 5
+[info] - fib(0) is 0
+[info] - isSorted straightforward with Ints
+[info] - isSorted with repeat Ints
+[info] - isSorted with unsorted Int Array
+[info] - isSorted with sorted string lengths
+[info] - isSorted with unsorted string array
+[info] Run completed in 363 milliseconds.
+[info] Total number of tests run: 7
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 7, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[debug] Passed tests:
+[debug] 	RecursionTests
