@@ -1,6 +1,8 @@
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.must.Matchers
-import Either._
+import com.rspears._
+import com.rspears.Either._
+import com.rspears.lists._
 import org.scalatest.matchers.should.Matchers.convertToAnyShouldWrapper
 
 class EitherTests extends AnyFunSuite with Matchers {

@@ -1,5 +1,6 @@
 import org.scalatest.funsuite.AnyFunSuite
-import Tree._
+import com.rspears.Tree._
+import com.rspears._
 
 class TreeTests extends AnyFunSuite {
   test("size test") {

@@ -1,3 +1,5 @@
+package com.rspears.lists
+
 sealed trait MyList[+A]
 case object Nil extends MyList[Nothing]
 case class Cons[+A](head: A, tail: MyList[A]) extends MyList[A]

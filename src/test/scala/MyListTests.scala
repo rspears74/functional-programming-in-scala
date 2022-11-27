@@ -1,5 +1,6 @@
 import org.scalatest.funsuite.AnyFunSuite
-import MyList._
+import com.rspears.lists._
+import com.rspears.lists.MyList._
 
 class MyListTests extends AnyFunSuite {
   test("ex 3.1") {

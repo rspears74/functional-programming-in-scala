@@ -1,3 +1,7 @@
+package com.rspears
+
+import com.rspears.lists._
+
 sealed trait Either[+E, +A] {
   def map[B](f: A => B): Either[E, B] = this match {
     case Left(a) => Left(a)
