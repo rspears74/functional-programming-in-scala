@@ -103,4 +103,26 @@ class StreamTests extends AnyFunSuite with Matchers with MockitoSugar {
   test("take via unfold") {
     Stream.take(Stream(1, 2, 3, 4, 5), 3).toList shouldBe List(1, 2, 3)
   }
+
+  test("takeWhile via unfold") {
+    Stream.takeWhile(Stream(1, 2, 3, 4))(_ < 3).toList shouldBe List(1, 2)
+  }
+
+  test("zipWith via unfold") {
+    Stream.zipWith(Stream(1, 2, 3), Stream(2, 3))(_ + _).toList shouldBe {
+      List(3, 5)
+    }
+  }
+
+  test("zipAll equal length") {
+    Stream.zipAll(Stream(1, 2, 3), Stream(2, 3, 4)).toList shouldBe {
+      List((Some(1), Some(2)), (Some(2), Some(3)), (Some(3), Some(4)))
+    }
+  }
+
+  test("zipAll unequal lengths") {
+    Stream.zipAll(Stream(1, 2, 3), Stream(2, 3)).toList shouldBe {
+      List((Some(1), Some(2)), (Some(2), Some(3)), (Some(3), None))
+    }
+  }
 }
