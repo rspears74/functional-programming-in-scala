@@ -7,5 +7,6 @@ lazy val root = (project in file("."))
     name := "functional-programming-in-scala"
   )
 
-libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.13" % "test"
+libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.13"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.13" % "test"
+libraryDependencies += "org.mockito" %% "mockito-scala-scalatest" % "1.17.12"
