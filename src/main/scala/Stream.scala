@@ -33,6 +33,9 @@ sealed trait Stream[+A] {
     case _ => Empty
   }
 
+  def exists(p: A => Boolean): Boolean =
+    foldRight(false)((a, b) => p(a) || b)
+
   def forAll(p: A => Boolean): Boolean = this match {
     case Cons(h, t) => p(h()) && t().forAll(p)
     case _ => true
@@ -143,4 +146,28 @@ object Stream {
       case (Empty, Cons(h2, t2)) => Some((None, Some(h2())), (Empty, t2()))
       case _ => None
     }
+
+  def startsWith[A](s: Stream[A], s1: Stream[A]): Boolean = {
+    zipAll(s, s1).takeWhile(!_._2.isEmpty).forAll {
+      case (a, b) => a == b
+    }
+  }
+
+  def tails[A](s: Stream[A]): Stream[Stream[A]] = {
+    unfold(s) {
+      case Cons(h, t) => Some((Cons(h, t), t()))
+      case _ => None
+    }
+  }
+
+  def hasSubsequence[A](s: Stream[A], s1: Stream[A]): Boolean =
+    tails(s).exists(startsWith(_, s1))
+
+  def scanRight[A, B](s: Stream[A])(z: B)(f: (A, => B) => B): Stream[B] = {
+    s.foldRight((z, Stream(z)))((v, acc) => {
+      val acc1 = acc
+      val a = f(v, acc1._1)
+      (a, Stream.cons(a, acc1._2))
+    })._2
+  }
 }

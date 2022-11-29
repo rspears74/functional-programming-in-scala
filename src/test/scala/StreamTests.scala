@@ -125,4 +125,28 @@ class StreamTests extends AnyFunSuite with Matchers with MockitoSugar {
       List((Some(1), Some(2)), (Some(2), Some(3)), (Some(3), None))
     }
   }
+
+  test("startsWith pass") {
+    Stream.startsWith(Stream(1, 2, 3), Stream(1, 2)) shouldBe true
+  }
+
+  test("startsWith fail") {
+    Stream.startsWith(Stream(1, 2, 3), Stream(2, 3)) shouldBe false
+  }
+
+  test("startsWith longer second list") {
+    Stream.startsWith(Stream(1, 2, 3), Stream(1, 2, 3, 4)) shouldBe false
+  }
+
+  test("tails") {
+    Stream.tails(Stream(1, 2, 3)).toList.map(_.toList) shouldBe {
+      Stream(List(1, 2, 3), List(2, 3), List(3)).toList
+    }
+  }
+
+  test("scanRight") {
+    Stream.scanRight(Stream(1, 2, 3))(0)(_ + _).toList shouldBe {
+      List(6, 5, 3, 0)
+    }
+  }
 }
